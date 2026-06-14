@@ -98,7 +98,7 @@ export function DocsSidebar({
           <MobileNavGlyph isOpen={true} />
         </button>
 
-        <div className="h-full overflow-hidden pb-8 pt-20 lg:overflow-y-auto lg:py-8 lg:pb-20 lg:pt-8 lg:[scrollbar-color:rgba(29,52,135,0.12)_transparent] lg:[scrollbar-width:thin]">
+        <div className="h-full overflow-hidden pb-8 pt-20 lg:overflow-y-auto lg:py-8 lg:pb-20 lg:pt-8">
           <nav className="flex flex-col gap-0.5">
             {docsSidebar.map((section) => (
               <SidebarSection

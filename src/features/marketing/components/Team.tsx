@@ -141,17 +141,33 @@ function TeamCard({ member }: { member: TeamMember }) {
               <GitHubIcon />
             </a>
           ) : null}
-          <span
-            className={cn(
-              "inline-flex h-9 w-9 items-center justify-center rounded-full text-sluice-navy transition-colors duration-200 dark:text-[#edeff5]",
-              "hover:bg-sluice-routeBlue/10 hover:text-sluice-routeBlue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sluice-routeBlue dark:hover:bg-[#6d96f0]/12 dark:hover:text-[#8aabf4]",
-            )}
-            title={`${member.name} official account coming soon`}
-            aria-label={`${member.name} official account coming soon`}
-            role="img"
-          >
-            <AtSign size={24} strokeWidth={2.15} />
-          </span>
+          {member.xHref && member.name === "whoisanku" ? (
+            <a
+              href={member.xHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                "inline-flex h-9 w-9 items-center justify-center rounded-full text-sluice-navy transition-colors duration-200 dark:text-[#edeff5]",
+                "hover:bg-sluice-routeBlue/10 hover:text-sluice-routeBlue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sluice-routeBlue dark:hover:bg-[#6d96f0]/12 dark:hover:text-[#8aabf4]",
+              )}
+              title={`${member.name} on X`}
+              aria-label={`${member.name} on X`}
+            >
+              <AtSign size={24} strokeWidth={2.15} />
+            </a>
+          ) : (
+            <span
+              className={cn(
+                "inline-flex h-9 w-9 items-center justify-center rounded-full text-sluice-navy transition-colors duration-200 dark:text-[#edeff5]",
+                "hover:bg-sluice-routeBlue/10 hover:text-sluice-routeBlue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sluice-routeBlue dark:hover:bg-[#6d96f0]/12 dark:hover:text-[#8aabf4]",
+              )}
+              title={`${member.name} official account coming soon`}
+              aria-label={`${member.name} official account coming soon`}
+              role="img"
+            >
+              <AtSign size={24} strokeWidth={2.15} />
+            </span>
+          )}
         </div>
       </div>
     </article>

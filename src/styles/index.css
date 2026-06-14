@@ -73,6 +73,11 @@
   --roadmap-tech: 47 95 208;
   --roadmap-net: 11 100 112;
   --roadmap-com: 104 86 198;
+
+  /* Custom Scrollbar styles */
+  --scrollbar-track-bg: transparent;
+  --scrollbar-thumb-bg: rgba(29, 52, 135, 0.16);
+  --scrollbar-thumb-hover-bg: rgba(29, 52, 135, 0.35);
 }
 
 .dark {
@@ -126,6 +131,11 @@
   --roadmap-tech: 109 150 240;
   --roadmap-net: 95 196 209;
   --roadmap-com: 160 133 240;
+
+  /* Custom Scrollbar styles (dark theme) */
+  --scrollbar-track-bg: transparent;
+  --scrollbar-thumb-bg: rgba(109, 150, 240, 0.22);
+  --scrollbar-thumb-hover-bg: rgba(109, 150, 240, 0.45);
 }
 
 /* Shared page background: vertical wash.
@@ -457,4 +467,37 @@
     text-align: center;
     font-size: 11px !important;
   }
+}
+
+/* ============================================================
+   Global Custom Scrollbar Styling
+   ============================================================ */
+
+/* Firefox and Standard properties */
+html,
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-bg) var(--scrollbar-track-bg);
+}
+
+/* Webkit (Chrome, Safari, Edge) implementation */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-bg);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-bg);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover-bg);
 }
