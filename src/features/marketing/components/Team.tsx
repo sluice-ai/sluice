@@ -141,7 +141,7 @@ function TeamCard({ member }: { member: TeamMember }) {
               <GitHubIcon />
             </a>
           ) : null}
-          {member.xHref && member.name === "whoisanku" ? (
+          {member.xHref ? (
             <a
               href={member.xHref}
               target="_blank"

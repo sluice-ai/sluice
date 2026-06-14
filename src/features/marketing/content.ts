@@ -186,9 +186,9 @@ export const teamMembers: TeamMember[] = [
   {
     name: "0xAustin",
     role: "Chief Business Officer",
-    handle: "@0xAustin",
+    handle: "@permabeaull",
     initials: "0x",
-    xHref: "https://x.com/0xAustin",
+    xHref: "https://x.com/permabeaull",
     palette: "teal",
     imageSrc: "/images/team/0xAustin.webp",
     imageAlt: "Pixel art avatar for 0xAustin",
@@ -196,9 +196,9 @@ export const teamMembers: TeamMember[] = [
   {
     name: "segoyal",
     role: "Chief Operations Officer",
-    handle: "@segoyal",
+    handle: "@segoyal_",
     initials: "SG",
-    xHref: "https://x.com/segoyal",
+    xHref: "https://x.com/segoyal_",
     palette: "violet",
     imageSrc: "/images/team/segoyal.webp",
     imageAlt: "Blue-lit developer silhouette avatar for segoyal",
